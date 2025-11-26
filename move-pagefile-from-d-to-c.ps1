@@ -13,7 +13,7 @@ if ($dPage) {
     # Remove pagefile on D:
     $dPage | Remove-CimInstance
 
-    # Optional: also remove any existing explicit C: config
+    # Optional: remove any existing explicit C: config
     Get-CimInstance -ClassName Win32_PageFileSetting |
         Where-Object { $_.Name -like 'C:\pagefile.sys' } |
         Remove-CimInstance -ErrorAction SilentlyContinue
@@ -24,6 +24,9 @@ if ($dPage) {
         InitialSize = 0    # 0,0 = system‑managed size
         MaximumSize = 0
     } | Out-Null
-}
 
-Write-Host "Pagefile settings updated. A reboot is required for changes to apply."
+    Write-Host "Moved pagefile from D: to C:. Reboot required for change to take effect."
+}
+else {
+    Write-Host "No pagefile found on D:. No changes made."
+}
