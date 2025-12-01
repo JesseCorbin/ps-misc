@@ -44,4 +44,4 @@ $json | foreach-object {
 $json | ConvertTo-Json | set-content .\AppxPackages.json
 
 cd ..\..
-.\Windows_VDOT.ps1
+Start .\Windows_VDOT.ps1 -ArgumentL "-Opimizations All"
