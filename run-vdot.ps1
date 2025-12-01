@@ -1,6 +1,6 @@
 cd $env:TEMP
 Invoke-WebRequest "https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool/archive/refs/heads/main.zip" -OutFile .\VDOT_main.zip
-Expand-Archive -Path .\VDOT_main.zip -DestinationPath .\VDOT 
+Expand-Archive -Path .\VDOT_main.zip -DestinationPath .\VDOT -Force
 
 cd .\VDOT\Virtual-Desktop-Optimization-Tool-main
 cd .\2009\ConfigurationFiles
