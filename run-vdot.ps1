@@ -43,6 +43,5 @@ $json | foreach-object {
 
 $json | ConvertTo-Json | set-content .\AppxPackages.json
 
-# Invoke-WebRequest "https://raw.githubusercontent.com/JesseCorbin/ps-misc/refs/heads/main/AppxPackages.json" -OutFile .\Test_AppxPackages.json
 cd ..\..
 .\Windows_VDOT.ps1
