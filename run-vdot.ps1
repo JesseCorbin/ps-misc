@@ -44,4 +44,4 @@ $json | foreach-object {
 $json | ConvertTo-Json | set-content .\AppxPackages.json
 
 cd ..\..
-& .\Windows_VDOT.ps1 -Optimizations All
+& .\Windows_VDOT.ps1 -Optimizations All -Verbose -AcceptEula
