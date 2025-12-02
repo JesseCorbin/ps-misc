@@ -31,7 +31,6 @@ $packagesToDisable = @(
     'Microsoft.XboxApp',
     'Microsoft.MixedReality.Portal',
     'MicrosoftTeams',
-    'MSTeams',
     'Microsoft.Wallet'
 )
 
